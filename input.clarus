@@ -1,0 +1,24 @@
+#activate
+    // Adapted from Appendix A of the language specification.
+    int total;
+    int i;
+    total = 0;
+    input(total);
+
+    float pi = 3.14;
+    char grade = 'A';
+    string name = "Hello World";
+    /* Comments are consumed without tokens.
+       Their newlines still update the position. */
+    for (int i = 0; i < 10; i++)
+    {
+        if (i % 2 == 0)
+        {
+            print(i);
+        }
+        else
+        {
+            continue;
+        }
+    }
+#deactivate

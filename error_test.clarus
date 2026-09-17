@@ -1,0 +1,13 @@
+#activate
+int abcasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd;
+int total = 5 @ 2;
+print("hello);
+char missing = 'A
+char tooLong = 'AB';
+char empty = '';
+char punctuation = '@';
+float incomplete = 12.;
+& | $ #unknown
+print("Recovered");
+#deactivate
+/* This final comment deliberately has no closing delimiter.
