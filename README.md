@@ -309,3 +309,17 @@ long identifiers, and command-line errors. Both supplied samples were run.
 
 For a viva, trace `int a = 5;` first, then explain why `==` needs lookahead,
 why `intValue` remains one identifier, and how the lexer resumes after `3abc`.
+
+
+g++ -std=c++11 -Wall -Wextra -pedantic main.cpp lexer.cpp parser.cpp ll1.cpp -o parser
+
+./parser input.clarus                  # recursive descent, as before
+./parser --ll1 input.clarus            # table-driven LL(1)
+./parser --trace small.clarus          # LL(1) with the step-by-step stack trace
+./parser --tables                      # productions, FIRST/FOLLOW sets, parse table
+
+
+g++ -std=c++11 -Wall -Wextra -pedantic main.cpp lexer.cpp parser.cpp -o parser
+./parser input.clarus
+./parser --tokens input.clarus      # also prints the token table
+./parser parser_error_test.clarus
